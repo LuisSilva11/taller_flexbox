@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+:root {
+    --azulclaro: #48D6ED;
+    --azuloscuro: #337AB7;
+    --azulnegro: #303342;
+    --negro: #333333;
+    --negro2: #000;
+    --gris: #B2B3B3;
+    --fondo: #FFFEFC;
+    --verdeazul: #157A8A;
+    --Magenta: #9C2759;
+    --blanco: #fff;
+    --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Marcellus', serif;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--negro);
+    font-family: 'Marcellus', serif;
+    font-size: 1.3em;
+    padding: 1rem;
+}
+
+
+.item {
+    padding: 1rem;
+}
+
+.login {
+    padding: 1rem;
+    background-color: var(--azuloscuro);
+    border-radius: 4px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.logo img {
+    height: 3rem;
+}
+/*CARRUCEL*/
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border: solid #fff 2px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.elements {
+
+    text-align: center;
+    margin-top: -2em;
+}
+
+.quadrate {
+    cursor: pointer;
+    height: 4px;
+    width: 50px;
+    margin: 0 2px;
+    background-color: #717171;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 2px;
+}
+
+.active,
+.quadrate:hover {
+    background-color: #fff;
+}
+
+@media screen and (max-width:900px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .container {
+        width: 100%;
+    }
+
+    .prev,
+    .next {
+        padding: 5px;
+    }
+}
+
+/*INFOCARRUCEL*/
+
+.text-slider{
+    position: absolute;
+    color: var(--blanco);
+    top: 69%;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding : 2.1rem;
+    width: 70%;
+    font-size: 36.5px;
+ 
+}
+
+
+
+.etiqueta{
+    position: absolute;
+    display: flex;
+    color: var(--blanco);
+    background-color: #9C2759;
+    font-family: 'Marcellus', serif;
+    font-size: 2em;
+    margin-left: 97%;
+    width: 3%;
+    top: 71%;
+    height: 42%;
+    border-radius: 0.1em;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 1);
+    font-weight: bold;
+    
+}
+
+
+
+/* bajo carricel*/
+#info {
+    padding: 6em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info-text {
+    width: 36em;
+    align-self: center;
+    font-size: 1.5em;
+}
+
+.info-image img {
+    width: 14em;
+    margin-right: -4em;
+}
+
+/*FACTURE*/
+
+#features {
+    background: url(../img/bg-features.png);
+    color: white;
+    padding-top: 1rem;
+}
+
+.features-title {
+    background-color: rgba(0, 0, 0, 0.35);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.5em;
+}
+
+.features-description {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    width: 25%;
+    min-width: 180px;
+    max-width: 230px;
+    margin: 0.8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.feature i {
+    font-size: 2.2em;
+    margin-bottom: 1.5rem;
+}
+
+.feature-blue {
+    background-color: #00325eae;
+}
+
+.feature-black {
+    background-color: rgba(0, 0, 0, 0.59);
+}
+
+
+/*SOY EL MAPA*/
+
+#location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.125rem;
+    text-align: center;
+    position: relative;
+}
+
+.location-tittle {
+    color: var(--negro2);
+    font-size: 3em;
+
+    padding: 1em;
+}
+
+.location-maps {
+    width: 100%;
+    padding: 1em;
+}
+
+.location-text {
+
+    font-family: 'Marcellus', serif;
+    font-size: 2em;
+    justify-content: center;
+    line-height: 2em;
+
+
+}
+
+.location-text hr {
+    width: 28em;
+    border-color: var(--azulclaro);
+    position: absolute;
+    top: 90%;
+    left: 27.5%;
+    margin: -25px 0 0 -25px;
+
+}
+
+.mapa {
+    width: 100%;
+}
+
+/*CARDS*/
+
+.title-cards{
+    font-family: 'Marcellus', serif;
+    display: flex;
+    color: var(--blanco);
+    justify-content: center;
+    font-size: 2.1em;
+    background-color: var(--negro);
+    padding-bottom: 7%;
+    padding-top: 2%;
+    
+    
+}
+
+.card{
+    position: relative;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -4.5%;
+    left: 3%;
+
+}
+
+.card__perfil{
+    width: 25%;
+    padding: 20px;
+    background-image: url(../img/Group\ 200.svg);
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.card__perfil:hover img{
+    transform: rotate(0);
+}
+.card__nombre img{
+    width: 24%;
+    color: var(--blanco);
+    margin-left: -75%;
+    border-radius: 50%;
+
+}
+
+.card__descripcion p{
+    color: var(--blanco);
+
+}
+
+.card__nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nombre{
+    position: relative;
+    color: var(--blanco);
+    font-family: 'Playfair Display', serif;
+    top: -35%;
+    left: 30%;
+}
+
+.icon{
+   
+    padding: 1%;
+    font-size: 150%;
+
+}
+
+.icon1{
+    color: var(--Magenta);
+    font-size: 150%;
+    padding: 1%;
+}
+
+/*Footer*/
+
+footer {
+    display: flex;
+    margin-top: 2em;
+    background-color: #333333;
+    justify-content: space-around;
+    width: 100%;
+    height: 9em;
+    padding: 50px 0;
+    
+}
+
+footer article {
+    width: 25%;
+    color: #ffff;
+    padding: 0 1em;
+}
+
+.iconos i {
+    padding: 1em;
+    font-size: 150%;
+}
+
+.footer-direccion {
+    padding: 1em 0;
+
+}
+
+.politicas p {
+    padding: 1em;
+}
+
+
+.desk{
+    background-image: url(../img/Hotel.jpg);
+    background-size: cover;
+    height: 100px;
+}
+
+.navdash{
+    position: absolute;
+    width: 300px;
+    height: 96.6%;
+    background: var(--azulnegro);
+    flex-direction: column;
+
+}
+
+.fondito{
+    position: relative;
+    width: 110%;
+    height: 25%;
+    top: -15px;
+    background-image: url(../img/Group\ 200.svg);
+    background-size: cover;
+}
+
+
+.logo{
+    display: flex;
+    position: relative;
+    color: var(--blanco);
+    top: 10%;
+    left: 20%;
+}
+
+.datos{
+    position: relative;
+    padding-top: 40%;
+    left: -70px;
+}
+
+.parra{
+    font-size: 12px;
+}
+.options{
+    display: flex;
+    position: relative;
+    top: -170px;
+    padding: 1rem;
+    left: -70px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.items:hover{
+    display: block;
+    background-color: #0B3860;
+}
+
+.salir{
+    position: relative;
+    background: var(--negro);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 249%;
+    left: -92px;
+    top: 32px;
+}
+
+.information{
+    width: 79%;
+    height: 860px;
+    background-color: rgba(245, 241, 241, 0.59);
+    font-size: 29px;
+    top: 35px; 
+    left: 370px;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+.information-image{
+    position: relative;
+    top: 80px;
+    left: 60px;
+    display: flex;
+    height: 300px;
+    width: 300px; 
+    float: left;
+}
+
+.information-text h2{
+    position: relative;
+    left: 150px;
+}
+
+.information-text{
+    position: relative;
+    top: 20px;
+    font-size: 25px;
+}
+
+input{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.tipoid{
+    position: relative;
+    left: 150px;
+    top: 20px;
+}
+.id{
+    position: relative;
+    left: 450px;
+    top: -95px;
+} 
+
+.name{
+    position: relative;
+    top: -90px;
+}
+
+.last{
+    position: relative;
+    left: 750px;
+    top: -185px;
+}
+.date{
+    position: relative;
+    left: 300px;
+    top: -170px;
+}
+
+.country{
+    position: relative;
+    left: 750px;
+    top: -265px;
+}
+
+.form-check{
+    display: flex;
+    position: relative;
+    left: 300px;
+    top: -250px;
+    justify-content: start;
+}
+
+.cel{
+    position: relative;
+    left: 750px;
+    top: -380px;
+}
+
+.mail{
+    position: relative;
+    left: 300px;
+    top: -370px;
+}
+
+.actu{
+    position: relative;
+    left: 300px;
+    top: -370px;
+}
+
+.button {
+    background: var(--azulnegro);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.pass{
+    position: relative;
+    left: 450px;
+    top: -340px;
+}
+
+.confpass{
+    position: relative;
+    left: 60%;
+    top: -435px;
+}
+
+.cambiar{
+    background: var(--azulnegro);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 20%;
+}
+
+.camb{
+    position: relative;
+    left: 450px;
+    top: -430px; 
+}
+
+.cambiarpass{
+    background: var(--azulnegro);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.cambpass{
+    position: relative;
+    left: 80px;
+    top: -750px; 
+}
